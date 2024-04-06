@@ -4,7 +4,7 @@ import Keycloak from 'keycloak-js';
 const keycloakConfig = {
   url: 'http://localhost:8080/',
   realm: 'douanes',
-  clientId: 'MPA',
+  clientId: 'SPA',
   clientSecret:'D1xu1kO7C1dx92dTC6mAtDhnNNWYgkaH',
 };
 
