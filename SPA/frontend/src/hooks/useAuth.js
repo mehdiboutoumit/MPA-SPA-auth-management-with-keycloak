@@ -11,8 +11,8 @@ const useAuth = () => {
   const isRun = useRef(false);
   const [token, setToken] = useState(null);
   const [isLogin, setLogin] = useState(false);
+  const [error, setError] = useState(null); // Add state for error handling
 
-  console.log(token);
   useEffect(() => {
     if (isRun.current) return;
 
@@ -26,11 +26,19 @@ const useAuth = () => {
         setToken(client.token);
         console.log(res);
         console.log(client.token);
+      })
+      .catch((error) => { // Handle promise rejection
+        setError(error);
+        console.log(error);
       });
   }, []);
 
+  if (error) {
+    console.log('Error initializing Keycloak:', error);
+    // You can handle the error further if needed, e.g., display an error message to the user
+  }
+
   return [isLogin, token];
-  console.log(token);
 };
 
 export default useAuth;
