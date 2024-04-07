@@ -15,7 +15,7 @@ const Dashboard = () => {
         <h1>Company Dashboard</h1>
         <div className="summary">
           <div className="summary-item">
-            <h2>Total Employees</h2>
+            <h2>Total Employees ASEDS</h2>
             <p>500</p>
           </div>
           <div className="summary-item">
