@@ -14,6 +14,36 @@
     </servlet-mapping>
 
     <welcome-file-list>
-        <welcome-file>auth.xhtml</welcome-file>
+        <welcome-file>home.xhtml</welcome-file>
     </welcome-file-list>
+
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Private area</web-resource-name>
+            <url-pattern>/contact.xhtml</url-pattern>
+            <url-pattern>/profile.xhtml</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>user</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Public area</web-resource-name>
+            <url-pattern>/home.xhtml</url-pattern>
+        </web-resource-collection>
+    </security-constraint>
+
+    <login-config>
+        <auth-method>OIDC</auth-method>
+
+    </login-config>
+
+    <security-role>
+        <role-name>user</role-name>
+    </security-role>
+
+
 </web-app>
