@@ -14,7 +14,7 @@ const Navigation = () => {
     <nav className="navbar">
       <ul className="nav-list">
         <li className="nav-item">Dashboard</li>
-        <button  className="button-item" onClick={handleLogout}>Logout</button>
+        <li  className="nav-item" onClick={handleLogout}>Logout</li>
         
       </ul>
     </nav>

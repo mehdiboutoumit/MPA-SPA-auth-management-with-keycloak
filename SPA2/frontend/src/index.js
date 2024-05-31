@@ -1,16 +1,17 @@
-// index.js
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
+import './index.css';
 import App from './App';
-import keycloakInst from './components/keycloak';
-import { ReactKeycloakProvider } from '@react-keycloak/web';
+import reportWebVitals from './reportWebVitals';
 
-const initOptions = { onLoad: 'login-required' };
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  
+    <App />
+ 
+);
 
-
-  ReactDOM.render(
-    <ReactKeycloakProvider authClient={keycloakInst} initOptions={initOptions}>
-      <App />
-    </ReactKeycloakProvider>,
-    document.getElementById('root')
-  )
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();

@@ -1,48 +1,60 @@
-/* src/App.css */
-
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #e6f7ff;
-  margin: 0;
-  padding: 0;
+.App {
+  text-align: center;
+  background-color: rgb(239, 241, 247);
+  height: 100vh;
 }
 
-.container {
-  max-width: 800px;
-  margin: 50px auto;
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-h1 {
-  color: #007bff;
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
-form {
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  max-width: 400px;
-  margin: auto;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+#app-header-2{
+  color: rgb(130, 130, 130);
 }
 
-label {
-  margin-bottom: 8px;
+#infoPanel{
+  text-align: left;
+  font-style: italic;
+  font-weight: bold;
+  color: rgb(126, 52, 52);
 }
 
-input {
-  padding: 8px;
-  margin-bottom: 16px;
+.p-card-title{
+  /* background-color: gray; */
 }
 
-button {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px;
-  cursor: pointer;
-  border: none;
+.App-link {
+  color: #61dafb;
 }
 
-button:hover {
-  background-color: #0056b3;
+.custom-btn-style {
+  width: 200px;
+  height: 70px;;
+  border-radius: 0px !important;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
