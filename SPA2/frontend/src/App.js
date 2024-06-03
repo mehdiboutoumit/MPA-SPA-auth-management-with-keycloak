@@ -59,6 +59,9 @@ function App() {
     const res = await httpClient.get('http://localhost:8081/api/contact');
     setInfoMessage(res.data);
   }
+  const RedirectJSF = ()=>{
+    window.location.href = "http://localhost:8080/MPA-JSF-1.0-SNAPSHOT/profile.xhtml"
+  }
 
   return (
     <div className="App">
@@ -81,6 +84,9 @@ function App() {
             <Button onClick={() => { setInfoMessage(kc.authenticated ? 'Authenticated: TRUE' : 'Authenticated: FALSE') }}
               className="m-1 custom-btn-style"
               label='Is Authenticated' />
+              <Button onClick={RedirectJSF}
+              className="m-1 custom-btn-style"
+              label='JSF profile' />
 
             <Button onClick={() => { kc.login() }}
               className='m-1 custom-btn-style'
